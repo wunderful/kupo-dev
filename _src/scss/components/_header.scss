@@ -1,0 +1,124 @@
+/* HEADER */
+header#header-home {
+	width: 100%; height: 700px;
+	background: url('/wp-content/themes/kupo-dev/assets/images/Wunderful-HomePage.jpg') no-repeat #ebeaf0;
+	background-position: right bottom; background-size: contain;
+	padding: 10px 0 5px 0;
+}
+
+header#header-others {
+	width: 100%; height: auto;
+	background-color: #ebeaf0;
+	padding: 10px 0 5px 0;
+}
+
+header#header-blog {
+	padding: 10px 0 5px 0;
+	width: 100%; height: auto;
+	background: url('/wp-content/themes/kupo-dev/assets/images/sub-header.png') repeat #ebeaf0;
+	background-position: center center;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+section#title-paragraph {
+	text-align: center;
+	padding: 50px inherit 20px inherit;
+}
+
+header img {
+	position: relative;
+	top: 1px;
+}
+
+/* SECTION > HERO-TEXT */
+section#hero-text {	position: relative;	top: 110px; }
+
+/* NAVBAR */
+nav {
+	position: relative;
+	top: 4px;
+	float: right;
+	font-weight: 100;
+}
+
+nav .menu a { transition: color 0.5s ease; color: $menuColor; }
+nav .menu a:hover {	color: $menuColorHover; }
+nav .menu-item-has-children a::after { content: ' ▼'; font-size: 8px!important; }
+
+nav ul#menu-wunderful li { font-size: 1em; }
+
+ul#menu-wunderful a { margin-left: 0px!important; }
+
+nav ul.sub-menu {
+	background-color: #ffffff;
+	border-radius: 4px;
+	font-size: 13px;
+	-webkit-box-shadow: 0px 0px 0px 1px rgba(226,226,226,1);
+	-moz-box-shadow: 0px 0px 0px 1px rgba(226,226,226,1);
+	box-shadow: 0px 0px 0px 1px rgba(226,226,226,1);
+}
+nav ul.sub-menu::before {
+	position: absolute;
+	top: -22px; left: 65px;
+	content: '▴';  font-size: 45px;
+	color: #e2e2e2;
+	z-index: -500;
+}
+
+nav ul.sub-menu a::after { content: ''; }
+
+ul.sub-menu li a { padding-top: 6px; padding-bottom: 6px; }
+
+/* SITE INTRO - HOMEPAGE ONLY */
+div#site-intro {
+	background-color: #f3f3f3;
+	padding: 20px 0 30px 0;
+	border-top: 1px solid #f9f9f9; border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 50px;
+}
+div#site-intro p { margin-bottom: 0; }
+
+/* BLOG BREADCRUMBS BAR */
+div#breadcrumb-bar {
+	background-color: #f3f3f3;
+	font-size: $fontSize;
+	padding: 0;
+	border-top: 1px solid #f9f9f9; border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 40px;
+}
+div#breadcrumb-bar a { transition: color 0.5s ease; color: $quickNavColor; text-decoration: none; }
+div#breadcrumb-bar a:hover { color: $quickNavColorHover; }
+
+/* MEDIA QUERIES */
+@media (max-width: 955px) {
+	section#go-topside .susy5 { @include span($susy3); }
+	section#go-topside .susy7 { @include span($susy9); }
+	header img {
+		top: 9px;
+		width: auto; height: 35px;
+	}
+	nav.menu a, nav.menu a:hover { font-size: $fontSize!important; }
+}
+
+@media (max-width: 769px) {
+	header#header-home {
+		width: 100%; height: 400px;
+		background-image: url('/wp-content/themes/kupo-dev/assets/images/Wunderful-HomePage.jpg'); /* fallback for older browsers */
+		background-image: linear-gradient(to bottom, rgba(235,234,240,0.7) 0%,rgba(235,234,240,0.7) 100%), url('/wp-content/themes/kupo-dev/assets/images/Wunderful-HomePage.jpg');
+	}
+	header img { display:none; }
+	span.wprmenu_ic_1, span.wprmenu_ic_2, span.wprmenu_ic_3 { background-color: #0e5096!important; }
+
+	section#hero-text {	position: relative; top: 50px!important; }
+	section#hero-text .btn-outline { padding: 7px 10px; }
+	section#hero-text .susy5 { @include span($susy12); }
+
+	div#breadcrumb-bar { position: relative; top: -38px; margin-bottom: 0px; }
+	div#breadcrumb-bar.blog-breadcrumb-bar { position: relative; top: 0px; margin-bottom: 0px; }
+	div#breadcrumb-bar p { line-height: 12px; font-size: 12px; }
+
+	div#wprmenu_bar { border-top: 2px solid $mainColor3; z-index: 9999; }
+	div#wprmenu_menu { z-index: 500!important; }
+	header#header-others { display: none; }
+	header#header-blog { height: 175px; padding-top: 45px; }
+}

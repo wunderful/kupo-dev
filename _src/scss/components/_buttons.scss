@@ -1,0 +1,81 @@
+/* BRAND SPECIFIC BUTTONS */
+.btn-outline, form#commentform input#submit {
+	background: none;
+	border: 2px solid $mainColor3; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
+	padding: 10px 14px;
+	color: $mainColor3;
+	font-weight: 400;
+}
+.btn-outline:hover, form#commentform input#submit:hover {
+	background: $mainColor2;
+	border: 2px solid #ebeaf0;
+	padding: 10px 14px;
+	color: $mainColor1;
+}
+
+.btn-outline-white {
+	background: none;
+	border: 2px solid $mainColor1; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
+	padding: 10px 14px;
+	color: $mainColor1;
+	font-weight: 400;
+}
+.btn-outline-white:hover {
+	background: $mainColor1;
+	border: 2px solid $mainColor1;
+	padding: 10px 14px;
+	color: $mainColor2!important;
+}
+
+/* BLOG BUTTONS - HIDE THEM */
+.btn-success {
+	display: none!important;
+}
+
+/* CORE SERVICES BUTTONS */
+button.left-button {
+	position: relative;
+	float: left;
+	width: 50%;
+	padding-top: 10px; padding-bottom: 10px;
+	background-color: #ededed;
+	border-top: none; border-right: none; border-bottom: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2;
+}
+button.left-button:hover { background-color: #dedede; }
+
+button.right-button {
+	position: relative;
+	top: -17px;
+	float: right;
+	width: 50%;
+	padding-top: 10px; padding-bottom: 10px;
+	background-color: $mainColor2;
+	color: $mainColor1;
+	border-top: 1px solid $mainColor2; border-right: 1px solid $mainColor2; border-bottom: 1px solid $mainColor2; border-left: none;
+}
+button.right-button:hover { 
+	background-color: $mainColor3;
+	border-right: 1px solid $mainColor2; border-bottom: 1px solid $mainColor2;
+}
+
+/* CASE STUDY BUTTONS */
+button.full-button::before {
+	position: relative;
+	top: 2px;
+	content: '➥ '; font-size: 20px;
+}
+button.full-button {
+	position: relative;
+	top: -18px;
+	float: right;
+	width: 100%;
+	padding-top: 10px; padding-bottom: 10px;
+	background-color: $mainColor1;
+	color: $mainColor3;
+	font-size: 16px;
+	border: 3px solid $mainColor1;
+}
+button.full-button:hover { 
+	background-color: $mainColor3;
+	color: $mainColor1;
+}

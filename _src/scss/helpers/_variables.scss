@@ -1,0 +1,74 @@
+/* Mobile Menu */ $break-menu: 769px; $mobile-menu-background-color: #fff; $toolbar-height-in-pixels: 0; $toolbar-height: $toolbar-height-in-pixels + px;
+
+/* Colours used in the brand and site */
+$mainColor1: #ffffff;
+$mainColor2: #036ada;
+$mainColor3: #0e5096;
+$mainColor4: #002d5d;
+
+$menuColor: #a1a1a1;
+$menuColorHover: #036ada;
+
+$mobileMenuColor: #777777;
+$mobileMenuColorHover: #222222;
+
+/* Breakpoints for responsiveness
+ * Common sizes are 320 (mobile), 768 (tablet), 1224 (laptops+) */
+$break-desktop: max-width 1224px;
+$break-tablet: max-width 768px;
+$break-mobile: max-width 320px;
+
+/* Common sizes are 320, 480, 768, 960, 1200, 1920
+$breakpointXL: max-width 1200px;
+$breakpointL: max-width 960px;
+$breakpointM: max-width 768px;
+$breakpointS: max-width 480px;
+$breakpointXS: max-width 320px;*/
+
+/* Susy variables for on demand grid system */
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+$susy1: 1 of 12;
+$susy2: 2 of 12;
+$susy3: 3 of 12;
+$susy4: 4 of 12;
+$susy5: 5 of 12;
+$susy6: 6 of 12;
+$susy7: 7 of 12;
+$susy8: 8 of 12;
+$susy9: 9 of 12;
+$susy10: 10 of 12;
+$susy11: 11 of 12;
+$susy12: 12 of 12;
+
+/* Typography variables */
+/* Headings */
+$h1Size: 3em;
+$h2Size: 2.6em;
+$h3Size: 2.3em;
+$h4Size: 1.8em;
+$h5Size: 1.4em;
+$h6Size: 1.2em;
+$headingColor: #112953;
+$subHeadingColor: #036ada!important;
+
+$headerHColor: #414141!important;
+$subHeaderHColor: #112953!important;
+
+/* Paragraph, List items, anchors etc */
+$fontSizeXSml: 0.5em;
+$fontSizeSml: 0.8em;
+$fontSize: 1em;
+$fontSizeMed: 0.7em;
+$fontSizeLrg: 1.2em;
+$fontColor: #616161;
+
+/* Quick Navbar (on homepage only) */
+$quickNavColor: #a1a1a1;
+$quickNavColorHover: #036ada;
+$quickNavColorSelected: #036ada;

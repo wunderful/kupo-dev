@@ -1,0 +1,15 @@
+.sf-menu {
+	width: 100%;
+}
+
+.menu--primary {
+	/*display: none;*/ /* Stops menu being hidden */
+
+	@include breakpoint(769px) {
+		display: block;
+	}
+}
+
+/* HIDE HOME MENU ITEM IN NON-MOBILE VERSION */
+.menu-item-2542 { display: none; }
+.menu-item-2508 { display: none; }

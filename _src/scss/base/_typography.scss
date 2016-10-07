@@ -1,0 +1,150 @@
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
+
+/* HEADING */
+h1, h2, h3 {
+	margin-top: 0; margin-bottom: 25px;
+	font-family: 'Raleway', sans-serif; font-weight: 700;
+	color: $headingColor;
+}
+h4, h5, h6 {
+	margin-top: 0; margin-bottom: 25px;
+	font-family: 'Raleway', sans-serif!important; font-weight: 700!important;
+	text-transform: uppercase; letter-spacing: 2px;
+	color: $subHeadingColor;
+}
+
+h4.pt-cv-title { margin-bottom: 20px!important; }
+h4.pt-cv-title::before { content: ''; }
+
+/* AUTHOR FONT STYLES */
+div.saboxplugin-authorname a { @include responsive-font(2.50vw, 0.95em, 1.3em); }
+div.vcard.author { margin-bottom: 15px; @include responsive-font(1.7vw, 0.9em, 1em); } 
+
+/* SETTING FONT SIZES BASED ON VIEWPORT WIDTH WITH MIN AND MAX SIZES - PERFECTED */
+h1 { @include responsive-font(4.5vw, 1.9em, 3em); }
+h2 { @include responsive-font(4.2vw, 1.5em, 2.6em); }
+h3 { @include responsive-font(3.8vw, 1.3em, 2.3em); }
+h4 { @include responsive-font(3vw, 1.1em, 1.8em); } h4.pt-cv-title { @include responsive-font(3vw, 1.1em, 1.8em); }
+h5 { @include responsive-font(2.75vw, 1.05em, 1.5em); }
+h6 { @include responsive-font(2.50vw, 0.95em, 1.3em); } footer section h6.widget-title { @include responsive-font(2.50vw, 0.95em, 1.3em); }
+
+header h1, header h2, header h3 { color: $headerHColor; }
+header h4, header h5, header h6 { color: $subHeaderHColor; }
+
+/* SPECIAL WIDGET AREA H6 ALTERATIONS */
+h6.widget-title::before { content: ''; }
+h6.widget-title {
+	font-family: 'Raleway', sans-serif!important; font-weight: 700!important; text-transform: uppercase;
+	color: $mainColor1;
+}
+
+/* BASIC TYPOGRAPHY */
+p, ul, li, address, button {
+	color: $fontColor;
+	font-family: 'Muli', sans-serif; font-weight: 300;
+	@include responsive-font(1.7vw, 0.9em, 1em);
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+ul { padding-left: 0px!important; list-style: none!important; } /* Removes list padding from left side */
+li { margin-bottom: 0px; }
+
+blockquote {
+	color: $fontColor;
+	font-family: 'Muli', sans-serif; font-weight: 700; font-style: italic;
+	@include responsive-font(2vw, 1em, 1.4em);
+	line-height: 25px;
+	margin: -10px auto 40px 50px;
+}
+blockquote::before {
+	background: none;
+	position: relative;
+	top: 50px; left: -45px;
+	content: '\00275D ';
+	font-size: 50px;
+	color: $mainColor2;
+}
+
+.lead { @include responsive-font(2vw, 1.1em, 1.4em); line-height: 32px; margin-bottom: 35px; }
+.small { @include responsive-font(1.5vw, 0.8em, 0.8em); }
+
+/* HEADER STYLES */
+section#hero-text h1 { font-weight: 700; @include responsive-font(4.5vw, 1.7em, 3em); }
+section#hero-text p.lead { @include responsive-font(2vw, 1em, 1.4em); }
+
+/* BREADCRUMBS */
+div#breadcrumb-bar p { margin: 10px 0; }
+
+/* CUSTOM ALTERATIONS */
+section#title-paragraph p.postmetadata { font-weight: 400; }
+section#title-paragraph a {
+	color: $mainColor2;
+	font-family: 'Muli', sans-serif; font-weight: 400; font-size: $fontSize;
+	text-decoration: none; font-style: italic;
+}
+section#title-paragraph a:hover {
+	color: $mainColor3;
+	text-decoration: underline;
+}
+
+section#content-area a, div#site-intro a {
+	color: $mainColor2;
+	font-family: 'Muli', sans-serif; font-weight: 400; font-size: $fontSize;
+	text-decoration: none; font-style: italic;
+}
+section#content-area a:hover, div#site-intro a:hover {
+	color: $mainColor3;
+	text-decoration: underline;
+}
+a button { font-style: normal; }
+
+pre {
+  background-color: #efefef;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+}
+
+/* FOOTER TYPOGRAPGHY */
+footer section p, footer section ul, footer section li, footer section button, footer section address {
+	@include responsive-font(1.8vw, 0.95em, 1em);
+	color: $mainColor1!important;
+}
+footer section li { line-height: 25px; }
+
+/* MEDIA QUERIES FOR TYPOGRAPHY */
+@media (max-width: 800px) {
+	footer section h6.widget-title { @include responsive-font(2.5vw, 0.95em, 1.2em); }
+	footer section p, footer section ul, footer section li, footer section button, footer section address { @include responsive-font(1.8vw, 0.95em, 1em); }
+}
+
+@media (max-width: 769px) {
+	p, ul, li, address, button { line-height: 23px; margin-bottom: 20px; }
+	li { margin-bottom: 0px; }
+	.lead { line-height: 26px; margin-bottom: 20px; }
+}
+
+@media (max-width: 350px) {
+	header p.lead { @include responsive-font(1vw, 0.7em, 0.7em); line-height: 20px; }
+}

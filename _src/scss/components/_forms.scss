@@ -1,0 +1,88 @@
+/* Contact Form 7 styles*/
+div.wpcf7 .wpcf7-not-valid {
+    border-color: #F00;
+}
+
+div.wpcf7 p {
+    margin-bottom: 10px;
+}
+
+span.wpcf7-not-valid-tip {
+    display: none!important;
+}
+
+div.wpcf7 input,
+div.wpcf7 textarea {
+    max-width: 100%;
+}
+
+div.wpcf7-validation-errors {
+    margin: 20px 0 0;
+    padding: 10px;
+    color: #e22a20;
+    background: #ededed;
+    text-align: center;
+    border: 1px solid #e22a20;
+    font-weight: 400;
+    font-size: 0.923em;
+}
+
+div.wpcf7 .wpcf7-mail-sent-ok {
+    margin: 10px 0 0;
+    padding: 10px;
+    background: #ededed;
+    border: 1px solid #c4dba0;
+    text-align: center;
+    color: #a1a1a1;
+    font-weight: normal;
+}
+
+div.wpcf7-mail-sent-ng {
+    margin: 0;
+    padding: 10px;
+    background: #ffe9e9;
+    color: #d04544;
+    border: 1px solid #e7a9a9;
+}
+
+.wpcf7 input,
+.wpcf7 textarea {
+    margin-top: 5px;
+}
+
+div.wpcf7 .col input {
+    width: 100%;
+}
+
+div.wpcf7 .one-half input {
+    width: 100%;
+}
+
+div.wpcf7 .one-half {
+    padding-left: 20px;
+    float: left;
+    width: 50%;
+}
+
+div.wpcf7 .one-half.first {
+    float: left;
+    padding-left: 0;
+}
+
+.wpcf7-text {
+	padding: 6px;
+	border: 1px solid #ededed;
+	border-radius: 2px;
+}
+
+.wpcf7-textarea {
+    width: 100%!important;
+    height: 180px;
+	padding: 6px;
+	border: 1px solid #ededed;
+	border-radius: 2px;
+}
+
+div.wpcf7 .full-width input {
+    width: 100%;
+}
